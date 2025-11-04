@@ -22,7 +22,7 @@ async function loadChat() {
 	// getting the div of the conversation
 	let conversationWindow = document.getElementsByClassName(
 		"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1odjw0f x1n2onr6 xh8yej3 x16o0dkt"
-	)[1]; // returns 2 elements, [0] is the div of all conversations, [1] is the div of current conversation
+	)[0]; // returns 2 elements, [0] is the div of all conversations, [1] is the div of current conversation
 	let lastScrollTop = conversationWindow.scrollTop;
 	let samePositionTime = 0; // To track how long the scrollTop hasn't changed
 
@@ -62,7 +62,7 @@ async function deleteMessages(conversation, messages) {
 
 		let conversationWindow = document.getElementsByClassName(
 			"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1odjw0f x1n2onr6 xh8yej3 x16o0dkt"
-		)[1];
+		)[0];
 
 		if (lastMessage.classList.length === 1) {
 			conversationWindow.scrollBy(0, -50);
@@ -183,7 +183,7 @@ async function deleteChat() {
 
 			let conversationWindow = document.getElementsByClassName(
 				"x78zum5 xdt5ytf x1iyjqo2 xs83m0k x1xzczws x6ikm8r x1odjw0f x1n2onr6 xh8yej3 x16o0dkt"
-			)[1];
+			)[0];
 			// Check if we are at the top of the conversation
 			if (conversationWindow.scrollTop <= 1) {
 				break;
